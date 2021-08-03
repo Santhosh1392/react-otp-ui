@@ -38,7 +38,7 @@ const OTPDemo = () => {
 
 ## Demo
 
-![Datepicker Demo](https://github.com/Santhosh1392/react-otp-ui/blob/main/demo/demo.gif)
+![OTP Demo](https://github.com/Santhosh1392/react-otp-ui/blob/main/demo/demo.gif)
 
 Check out [Online Demo](https://korimi.in/projects) here.
 
