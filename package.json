@@ -1,0 +1,50 @@
+{
+  "name": "react-otp-ui",
+  "version": "1.0.0",
+  "description": "One-time password input component for React.",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "start": "rollup -c -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Santhosh1392/react-otp-ui.git"
+  },
+  "keywords": [
+    "react",
+    "otp",
+    "input",
+    "component",
+    "javascript",
+    "react-component",
+    "one-time-password",
+    "password",
+    "mobile verification",
+    "phone number",
+    "widget",
+    "ui"
+  ],
+  "author": "Santhosh Kumar Korimi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Santhosh1392/react-otp-ui/issues"
+  },
+  "homepage": "https://github.com/Santhosh1392/react-otp-ui#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-runtime": "^6.26.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rollup": "^2.53.2",
+    "rollup-plugin-jsx": "^1.0.3",
+    "rollup-plugin-sass": "^1.2.2"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
+  "files": [
+    "dist"
+  ]
+}
