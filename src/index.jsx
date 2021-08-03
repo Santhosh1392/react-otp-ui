@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useReducer, useState } from "react";
+import React, { useEffect, useReducer, useState } from "react";
 import "./styles.scss";
 
 const MOVE_LEFT = "moveleft";
@@ -65,7 +65,7 @@ export const OtpInput = ({
   };
 
   return (
-    <Fragment>
+    <div className='react-otp-input-container'>
       <input
         type={secureInput ? "text" : "password"}
         onChange={(e) => onChange(e, inputIndex)}
@@ -81,7 +81,7 @@ export const OtpInput = ({
       {showSeparator && !isLastInput && (
         <span className="input-separator">{separator && separator[0]}</span>
       )}
-    </Fragment>
+    </div>
   );
 };
 
