@@ -90,7 +90,7 @@ const OtpInput = ({
   };
 
   return (
-    React.Fragment(null, [
+    React__default['default'].createElement('div', {className: "react-otp-input-container"}, [
       React__default['default'].createElement('input', {
         type: secureInput ? "text" : "password",
         onChange: (e) => onChange(e, inputIndex),
@@ -229,13 +229,13 @@ const OtpForm = ({
 };
 
 OtpForm.defaultProps = {
+  className: "",
+  disabled: false,
+  handleOnChange: null,
   numberOfInputs: 4,
   secureInput: true,
-  handleOnChange: null,
-  disabled: false,
-  className: "",
-  showSeparator: false,
   separator: "-",
+  showSeparator: false,
 };
 
 exports.OtpInput = OtpInput;
