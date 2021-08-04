@@ -30,6 +30,7 @@ const MOVE_LEFT = "moveleft";
 const MOVE_RIGHT = "move_right";
 const SET_VALUE = "SET_VALUE";
 const UPDATE_VALUE = "UPDATE_VALUE";
+const SET_ALL_VALUES = 'SET_ALL_VALUES';
 const getRandomID = () => `_${Math.random().toString(36).substr(2, 9)}`;
 
 const getInitialState = (numberOfInputs) => {
@@ -44,7 +45,7 @@ const getInitialState = (numberOfInputs) => {
 };
 
 const otpFormReducer = (state, action) => {
-  const { type, value, index, isBackspace } = action;
+  const { type, value, index, isBackspace, data } = action;
   const newState = [...state];
   if (type === SET_VALUE) {
     if (isBackspace) {
@@ -52,6 +53,8 @@ const otpFormReducer = (state, action) => {
     } else if (newState[index]) {
       newState[index].value = value;
     }
+  } else if (type === SET_ALL_VALUES) {
+    newState = [...data];
   }
   return newState;
 };
@@ -205,6 +208,14 @@ const OtpForm = ({
       onChange(returnState);
     }
   }, [inputsArray]);
+
+  React.useEffect(() => {
+    const inputs = getInitialState(numberOfInputs);
+    setInputsArray({
+      type: SET_ALL_VALUES,
+      data: inputs
+    });
+  }, [numberOfInputs]);
 
   return (
     React__default['default'].createElement('div', {className: "react-otp-ui-input-container"}, [

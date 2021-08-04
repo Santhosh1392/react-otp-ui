@@ -5,6 +5,7 @@ const MOVE_LEFT = "moveleft";
 const MOVE_RIGHT = "move_right";
 const SET_VALUE = "SET_VALUE";
 const UPDATE_VALUE = "UPDATE_VALUE";
+const SET_ALL_VALUES = 'SET_ALL_VALUES';
 const getRandomID = () => `_${Math.random().toString(36).substr(2, 9)}`;
 
 const getInitialState = (numberOfInputs) => {
