@@ -1,6 +1,6 @@
 {
   "name": "react-otp-ui",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "One-time password input component for React.",
   "main": "index.js",
   "scripts": {
