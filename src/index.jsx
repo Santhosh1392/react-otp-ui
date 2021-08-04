@@ -29,7 +29,7 @@ const otpFormReducer = (state, action) => {
       newState[index].value = value;
     }
   } else if (type === SET_ALL_VALUES) {
-    newState = [...data]
+    return data
   }
   return newState;
 };
