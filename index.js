@@ -95,7 +95,7 @@ const OtpInput = ({
   return (
     React__default['default'].createElement('div', {className: "react-otp-input-container"}, [
       React__default['default'].createElement('input', {
-        type: secureInput ? "text" : "password",
+        type: !secureInput ? "text" : "password",
         onChange: (e) => onChange(e, inputIndex),
         id: data.id,
         maxLength: 1,

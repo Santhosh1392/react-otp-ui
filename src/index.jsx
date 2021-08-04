@@ -70,7 +70,7 @@ export const OtpInput = ({
   return (
     <div className='react-otp-input-container'>
       <input
-        type={secureInput ? "text" : "password"}
+        type={!secureInput ? "text" : "password"}
         onChange={(e) => onChange(e, inputIndex)}
         id={data.id}
         maxLength={1}
