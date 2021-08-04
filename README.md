@@ -40,7 +40,7 @@ const OTPDemo = () => {
 
 ![OTP Demo](https://github.com/Santhosh1392/react-otp-ui/blob/main/demo/demo.gif)
 
-Check out [Online Demo](https://korimi.in/projects) here.
+Check out [Online Demo](https://korimi.in/projects/otp-form) here.
 
 ```sh
 import React from 'react'
