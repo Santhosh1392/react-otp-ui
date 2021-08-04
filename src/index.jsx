@@ -19,7 +19,7 @@ const getInitialState = (numberOfInputs) => {
 };
 
 const otpFormReducer = (state, action) => {
-  const { type, value, index, isBackspace } = action;
+  const { type, value, index, isBackspace, data } = action;
   const newState = [...state];
   if (type === SET_VALUE) {
     if (isBackspace) {
@@ -27,6 +27,8 @@ const otpFormReducer = (state, action) => {
     } else if (newState[index]) {
       newState[index].value = value;
     }
+  } else if (type === SET_ALL_VALUES) {
+    newState = [...data]
   }
   return newState;
 };
@@ -180,6 +182,14 @@ const OtpForm = ({
       onChange(returnState);
     }
   }, [inputsArray]);
+
+  useEffect(() => {
+    const inputs = getInitialState(numberOfInputs)
+    setInputsArray({
+      type: SET_ALL_VALUES,
+      data: inputs
+    })
+  }, [numberOfInputs])
 
   return (
     <div className="react-otp-ui-input-container">
